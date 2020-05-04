@@ -4,7 +4,7 @@
 #
 Name     : libgeotiff
 Version  : 1.6.0
-Release  : 2
+Release  : 3
 URL      : https://github.com/OSGeo/libgeotiff/releases/download/1.6.0/libgeotiff-1.6.0.tar.gz
 Source0  : https://github.com/OSGeo/libgeotiff/releases/download/1.6.0/libgeotiff-1.6.0.tar.gz
 Summary  : No detailed summary available
@@ -86,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1588116562
+export SOURCE_DATE_EPOCH=1588614020
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -106,7 +106,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1588116562
+export SOURCE_DATE_EPOCH=1588614020
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libgeotiff
 cp %{_builddir}/libgeotiff-1.6.0/LICENSE %{buildroot}/usr/share/package-licenses/libgeotiff/2e29d28d852441934f65ecc51e9ee3704c188432
