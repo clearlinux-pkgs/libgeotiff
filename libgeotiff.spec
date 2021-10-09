@@ -4,7 +4,7 @@
 #
 Name     : libgeotiff
 Version  : 1.6.0
-Release  : 4
+Release  : 5
 URL      : https://github.com/OSGeo/libgeotiff/releases/download/1.6.0/libgeotiff-1.6.0.tar.gz
 Source0  : https://github.com/OSGeo/libgeotiff/releases/download/1.6.0/libgeotiff-1.6.0.tar.gz
 Summary  : No detailed summary available
