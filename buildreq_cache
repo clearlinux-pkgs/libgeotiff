@@ -1,5 +1,4 @@
-1.6.0
+1.7.1
 doxygen
 graphviz
 perl
-pkgconfig(zlib)

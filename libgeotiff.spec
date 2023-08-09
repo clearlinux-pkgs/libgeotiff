@@ -4,10 +4,10 @@
 # Using build pattern: configure
 #
 Name     : libgeotiff
-Version  : 1.6.0
-Release  : 7
-URL      : https://github.com/OSGeo/libgeotiff/releases/download/1.6.0/libgeotiff-1.6.0.tar.gz
-Source0  : https://github.com/OSGeo/libgeotiff/releases/download/1.6.0/libgeotiff-1.6.0.tar.gz
+Version  : 1.7.1
+Release  : 8
+URL      : https://github.com/OSGeo/libgeotiff/releases/download/1.7.1/libgeotiff-1.7.1.tar.gz
+Source0  : https://github.com/OSGeo/libgeotiff/releases/download/1.7.1/libgeotiff-1.7.1.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause BSD-4-Clause-UC MIT
@@ -22,7 +22,6 @@ BuildRequires : perl
 BuildRequires : pkgconfig(libjpeg)
 BuildRequires : pkgconfig(libtiff-4)
 BuildRequires : pkgconfig(proj)
-BuildRequires : pkgconfig(zlib)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -82,15 +81,15 @@ man components for the libgeotiff package.
 
 
 %prep
-%setup -q -n libgeotiff-1.6.0
-cd %{_builddir}/libgeotiff-1.6.0
+%setup -q -n libgeotiff-1.7.1
+cd %{_builddir}/libgeotiff-1.7.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686948954
+export SOURCE_DATE_EPOCH=1691620012
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -110,10 +109,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1686948954
+export SOURCE_DATE_EPOCH=1691620012
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libgeotiff
-cp %{_builddir}/libgeotiff-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/libgeotiff/2e29d28d852441934f65ecc51e9ee3704c188432 || :
+cp %{_builddir}/libgeotiff-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/libgeotiff/3c657eb666d2c62c812b2f4184a2a2e4c5fb7f09 || :
 %make_install
 
 %files
@@ -155,11 +154,11 @@ cp %{_builddir}/libgeotiff-%{version}/LICENSE %{buildroot}/usr/share/package-lic
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libgeotiff.so.5
-/usr/lib64/libgeotiff.so.5.1.0
+/usr/lib64/libgeotiff.so.5.2.0
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/libgeotiff/2e29d28d852441934f65ecc51e9ee3704c188432
+/usr/share/package-licenses/libgeotiff/3c657eb666d2c62c812b2f4184a2a2e4c5fb7f09
 
 %files man
 %defattr(0644,root,root,0755)
