@@ -72,10 +72,13 @@ libgeotiff.so.5:ST_GetKey
 libgeotiff.so.5:ST_SetKey
 libgeotiff.so.5:ST_TagType
 libgeotiff.so.5:XTIFFClientOpen
+libgeotiff.so.5:XTIFFClientOpenExt
 libgeotiff.so.5:XTIFFClose
 libgeotiff.so.5:XTIFFFdOpen
+libgeotiff.so.5:XTIFFFdOpenExt
 libgeotiff.so.5:XTIFFInitialize
 libgeotiff.so.5:XTIFFOpen
+libgeotiff.so.5:XTIFFOpenExt
 libgeotiff.so.5:_GTIFFree
 libgeotiff.so.5:_GTIFSetDefaultTIFF
 libgeotiff.so.5:_GTIFcalloc
